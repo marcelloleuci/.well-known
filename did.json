@@ -1,1 +1,48 @@
-
+{
+  "id": "did:web:marcelloleuci.github.io",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:marcelloleuci.github.io"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://marcelloleuci.github.io/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/1113d851-1fb0-49c7-be12-7e23f37a4202"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#c2cd618260464878ab68bd517d17512evcSigningKey-e04df",
+      "controller": "did:web:marcelloleuci.github.io",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "N72h9jssEaNZKcmtmisO0iQtMC0Flc1Gggqq_P7SATY",
+        "y": "CT0uyVQmdgYSYU9WxK7yqo8krNqJGkt7EyA2tPPMcg8"
+      }
+    }
+  ],
+  "authentication": [
+    "#c2cd618260464878ab68bd517d17512evcSigningKey-e04df"
+  ],
+  "assertionMethod": [
+    "#c2cd618260464878ab68bd517d17512evcSigningKey-e04df"
+  ]
+}
